@@ -1,0 +1,65 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = F,
+  warning = F,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# clustifyrdatahub
+
+<!-- badges: start -->
+[![R build status](https://github.com/rnabioco/clustifyrdata/workflows/R-CMD-check/badge.svg)](https://github.com/rnabioco/clustifyrdata/actions)
+<!-- badges: end -->
+
+clustifyrdatahub provides external reference data sets for cell-type assignment with [clustifyr](https://rnabioco.github.io/clustifyr).
+
+Available references include:
+```
+knitr::kable(system.file("extdata", "metadata.csv", package = "clustifyrdatahub"))
+```
+
+To use `clustifyrdatahub`
+```{r}
+library(ExperimentHub)
+eh <- ExperimentHub()
+refs <- query(eh, "clustifyrdatahub")
+
+## either by index or id
+ref_MCA <- refs[[1]]          ## load the first resource in the list
+ref_MCA <- refs[["ref_MCA"]]  ## load by EH id
+
+## or load all refs
+clustifyrdatahub(metadata = FALSE) ## data are loaded
+clustifyrdatahub(metadata = TRUE) 
+
+## use for classification of cell types
+res <- clustifyr::clustify(
+  input = clustifyr::pbmc_matrix_small,
+  metadata = clustifyr::pbmc_meta$classified,
+  ref_mat = ref_MCA,
+  query_genes = clustifyr::pbmc_vargenes
+)
+```
+
+
+Alternatively, see the [reference page](https://rnabioco.github.io/clustifyrdata/reference) for available data sets, and [individual ref download page](https://rnabioco.github.io/clustifyrdata/articles/download_refs.html).
+
+Data sets have uniform suffixes:
+- `ref_*` : the prebuilt reference expression matrix.
+
+## Installation
+
+``` r
+# install.packages("remotes")
+remotes::install_github("rnabioco/clustifyrdatahub")
+```

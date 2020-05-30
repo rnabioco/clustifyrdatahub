@@ -33,12 +33,14 @@ To use `clustifyrdatahub`
 library(ExperimentHub)
 eh <- ExperimentHub()
 refs <- query(eh, "clustifyrdatahub")
+refs
 
 ## either by index or id
 ref_MCA <- refs[[1]]          ## load the first resource in the list
 ref_MCA <- refs[["ref_MCA"]]  ## load by EH id
 
 ## or load all refs
+library(clustifyrdatahub)
 clustifyrdatahub(metadata = FALSE) ## data are loaded
 clustifyrdatahub(metadata = TRUE) 
 

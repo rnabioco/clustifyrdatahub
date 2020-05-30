@@ -123,7 +123,7 @@ main.data <- data.frame(
   ),
   Maintainer="Rui Fu <raysinensis@gmail.com>",
   RDataClass="data.frame",
-  DispatchClass="Rds",
+  DispatchClass="Rda",
   stringsAsFactors = FALSE
 )
 

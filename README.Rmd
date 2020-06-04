@@ -32,25 +32,32 @@ To use `clustifyrdatahub`
 ```{r}
 library(ExperimentHub)
 eh <- ExperimentHub()
+
+## query
 refs <- query(eh, "clustifyrdatahub")
 refs
-
 ## either by index or id
-ref_MCA <- refs[[1]]          ## load the first resource in the list
-ref_MCA <- refs[["ref_MCA"]]  ## load by EH id
+ref_hema_microarray <- refs[[7]]         ## load the first resource in the list
+ref_hema_microarray <- refs[["EH3450"]]  ## load by EH id
 
-## or load all refs
-library(clustifyrdatahub)
-clustifyrdatahub(metadata = FALSE) ## data are loaded
-clustifyrdatahub(metadata = TRUE) 
+## or list and load
+refs <- listResources(eh, "clustifyrdatahub")
+ref_hema_microarray <- loadResources(eh, "clustifyrdatahub", "ref_hema_microarray")[[1]]
 
 ## use for classification of cell types
 res <- clustifyr::clustify(
   input = clustifyr::pbmc_matrix_small,
   metadata = clustifyr::pbmc_meta$classified,
-  ref_mat = ref_MCA,
+  ref_mat = ref_hema_microarray,
   query_genes = clustifyr::pbmc_vargenes
 )
+```
+
+```{r, include = F, eval = F}
+## or load all refs
+library(clustifyrdatahub)
+clustifyrdatahub(metadata = FALSE) ## data are loaded
+clustifyrdatahub(metadata = TRUE) 
 ```
 
 

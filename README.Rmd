@@ -53,11 +53,11 @@ res <- clustifyr::clustify(
 )
 ```
 
-```{r, include = F, eval = F}
-## or load all refs
+```{r}
+## or load refs by function name (after loading hub library)
 library(clustifyrdatahub)
-clustifyrdatahub(metadata = FALSE) ## data are loaded
-clustifyrdatahub(metadata = TRUE) 
+head(ref_hema_microarray())            ## data are loaded
+ref_hema_microarray(metadata = TRUE)   ## only metadata
 ```
 
 

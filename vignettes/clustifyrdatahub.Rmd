@@ -1,8 +1,15 @@
 ---
-output: github_document
+title: "clustifyrdatahub"
+author: Rui Fu
+date: "`r Sys.Date()`"
+output: 
+  BiocStyle::html_document:
+     toc_float: true
+vignette: >
+  %\VignetteIndexEntry{clustifyrdatahub}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -10,7 +17,7 @@ knitr::opts_chunk$set(
   message = F,
   warning = F,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "man/figures/",
   out.width = "100%"
 )
 ```
@@ -64,7 +71,13 @@ Data sets have uniform suffixes:
 
 ## Installation
 
-``` r
+```{r, eval = F}
 # install.packages("remotes")
 remotes::install_github("rnabioco/clustifyrdatahub")
 ```
+
+# session info
+```{r}
+sessionInfo()
+```
+

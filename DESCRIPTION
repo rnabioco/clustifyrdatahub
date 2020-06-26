@@ -40,7 +40,8 @@ Suggests:
     purrr,
     recount,
     tidyr,
-    ComplexHeatmap
+    ComplexHeatmap,
+    BiocStyle
 VignetteBuilder: 
     knitr
 Remotes:

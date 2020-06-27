@@ -61,7 +61,7 @@ res <- clustifyr::clustify(
 ## or load refs by function name (after loading hub library)
 library(clustifyrdatahub)
 ref_hema_microarray()[1:5, 1:5]           ## data are loaded
-ref_hema_microarray(metadata = TRUE)       ## only metadata
+ref_hema_microarray(metadata = TRUE)      ## only metadata
 ```
 
 Alternatively, see the [reference page](https://rnabioco.github.io/clustifyrdata/reference) for available data sets, and [individual ref download page](https://rnabioco.github.io/clustifyrdata/articles/download_refs.html).

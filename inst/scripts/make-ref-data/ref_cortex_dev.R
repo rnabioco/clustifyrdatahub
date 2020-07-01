@@ -8,7 +8,7 @@ ref_cortex_dev <- average_clusters(
   mat,
   meta,
   cluster_col = "WGCNAcluster",
-  if_log = F
+  if_log = FALSE
 )
 
-usethis::use_data(ref_cortex_dev, compress = "xz", overwrite = TRUE)
+saveRDS(ref_cortex_dev, "ref_cortex_dev")

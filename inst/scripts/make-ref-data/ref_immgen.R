@@ -4,7 +4,7 @@ library(usethis)
 immgen_ref <- average_clusters(
   SingleR::immgen$data,
   SingleR::immgen$types,
-  if_log = F
+  if_log = FALSE
 )
 
 immgen_ref_withNA <- immgen_ref

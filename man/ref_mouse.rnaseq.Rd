@@ -16,6 +16,9 @@ ref_mouse.rnaseq
 \description{
 28 general cell types
 }
+\examples{
+ref_mouse.rnaseq(metadata = TRUE)
+}
 \seealso{
 Other ref: 
 \code{\link{ref_MCA}()},

@@ -3,7 +3,8 @@
 \docType{data}
 \name{ref_moca_main}
 \alias{ref_moca_main}
-\title{Matrix of average gene expression per cluster from single-cell sci-RNA-seq3 from Mouse Organogenesis Cell Atlas.}
+\title{Matrix of average gene expression per cluster from single-cell
+ sci-RNA-seq3 from Mouse Organogenesis Cell Atlas.}
 \format{
 An object of class \code{function} of length 1.
 }
@@ -15,6 +16,9 @@ ref_moca_main
 }
 \description{
 100,000 cells
+}
+\examples{
+ref_moca_main(metadata = TRUE)
 }
 \seealso{
 Other ref: 

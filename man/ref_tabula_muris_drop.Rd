@@ -3,7 +3,8 @@
 \docType{data}
 \name{ref_tabula_muris_drop}
 \alias{ref_tabula_muris_drop}
-\title{Matrix of average gene expression per cluster from single-cell RNA-seq from Tabula Muris (10x genomics).}
+\title{Matrix of average gene expression per cluster from 
+single-cell RNA-seq from Tabula Muris (10x genomics).}
 \format{
 An object of class \code{function} of length 1.
 }
@@ -14,7 +15,11 @@ An object of class \code{function} of length 1.
 ref_tabula_muris_drop
 }
 \description{
-422,803 droplet libraries, 55,656 of which passed a QC cutoff of 500 genes and 1000 UMI
+422,803 droplet libraries, 55,656 of which passed a
+ QC cutoff of 500 genes and 1000 UMI
+}
+\examples{
+ref_tabula_muris_drop(metadata = TRUE)
 }
 \seealso{
 Other ref: 

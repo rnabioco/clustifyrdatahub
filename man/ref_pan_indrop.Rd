@@ -3,7 +3,8 @@
 \docType{data}
 \name{ref_pan_indrop}
 \alias{ref_pan_indrop}
-\title{Matrix of average gene expression per cluster from single-cell RNA-seq pancreas data using indrop method.}
+\title{Matrix of average gene expression per cluster from single-cell 
+RNA-seq pancreas data using indrop method.}
 \format{
 An object of class \code{function} of length 1.
 }
@@ -15,6 +16,9 @@ ref_pan_indrop
 }
 \description{
 A sample of 8569 pancreas cells
+}
+\examples{
+ref_pan_indrop(metadata = TRUE)
 }
 \seealso{
 Other ref: 

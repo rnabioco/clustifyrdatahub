@@ -16,6 +16,9 @@ ref_hema_microarray
 \description{
 38 distinct purified populations of human hematopoietic cells
 }
+\examples{
+ref_hema_microarray(metadata = TRUE)
+}
 \seealso{
 Other ref: 
 \code{\link{ref_MCA}()},

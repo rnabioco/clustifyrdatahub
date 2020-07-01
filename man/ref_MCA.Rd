@@ -16,6 +16,9 @@ ref_MCA
 \description{
 from mouse cell atlas project
 }
+\examples{
+ref_MCA(metadata = TRUE)
+}
 \seealso{
 Other ref: 
 \code{\link{ref_cortex_dev}()},

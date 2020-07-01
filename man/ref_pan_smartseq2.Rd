@@ -3,7 +3,8 @@
 \docType{data}
 \name{ref_pan_smartseq2}
 \alias{ref_pan_smartseq2}
-\title{Matrix of average gene expression per cluster from single-cell RNA-seq pancreas data using smartseq2 method.}
+\title{Matrix of average gene expression per cluster from single-cell 
+RNA-seq pancreas data using smartseq2 method.}
 \format{
 An object of class \code{function} of length 1.
 }
@@ -15,6 +16,9 @@ ref_pan_smartseq2
 }
 \description{
 A sample of 2209 pancreas cells
+}
+\examples{
+ref_pan_smartseq2(metadata = TRUE)
 }
 \seealso{
 Other ref: 

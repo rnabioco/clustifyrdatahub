@@ -16,6 +16,9 @@ ref_cortex_dev
 \description{
 47 distinct annotated clusters of human neuronal subtypes
 }
+\examples{
+ref_cortex_dev(metadata = TRUE)
+}
 \seealso{
 Other ref: 
 \code{\link{ref_MCA}()},

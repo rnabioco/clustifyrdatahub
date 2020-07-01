@@ -3,7 +3,8 @@
 \docType{data}
 \name{ref_tabula_muris_facs}
 \alias{ref_tabula_muris_facs}
-\title{Matrix of average gene expression per cluster from single-cell RNA-seq from Tabula Muris (SMART-Seq2).}
+\title{Matrix of average gene expression per cluster from 
+single-cell RNA-seq from Tabula Muris (SMART-Seq2).}
 \format{
 An object of class \code{function} of length 1.
 }
@@ -15,6 +16,9 @@ ref_tabula_muris_facs
 }
 \description{
 53,760 cells from 20 tissues from 8 mice
+}
+\examples{
+ref_tabula_muris_facs(metadata = TRUE)
 }
 \seealso{
 Other ref: 

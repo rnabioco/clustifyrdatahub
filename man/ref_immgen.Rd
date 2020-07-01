@@ -16,6 +16,9 @@ ref_immgen
 \description{
 253 mouse immune cell types
 }
+\examples{
+ref_immgen(metadata = TRUE)
+}
 \seealso{
 Other ref: 
 \code{\link{ref_MCA}()},

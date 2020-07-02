@@ -2,7 +2,7 @@
 #' single-cell RNA-seq from Tabula Muris (10x genomics).
 #'
 #' 422,803 droplet libraries, 55,656 of which passed a
-#'  QC cutoff of 500 genes and 1000 UMI
+#' QC cutoff of 500 genes and 1000 UMI
 #'
 #' @source <https://tabula-muris.ds.czbiohub.org/>
 #' @family ref
@@ -58,7 +58,7 @@
 "ref_pan_smartseq2"
 
 #' Matrix of average gene expression per cluster from single-cell
-#'  sci-RNA-seq3 from Mouse Organogenesis Cell Atlas.
+#' sci-RNA-seq3 from Mouse Organogenesis Cell Atlas.
 #'
 #' 100,000 cells
 #'
@@ -67,7 +67,8 @@
 #' @examples ref_moca_main(metadata = TRUE)
 "ref_moca_main"
 
-#' Matrix of average gene detection by microarray on sorted immune cell populations
+#' Matrix of average gene detection by microarray on sorted immune
+#' cell populations
 #'
 #' 38 distinct purified populations of human hematopoietic cells
 #'

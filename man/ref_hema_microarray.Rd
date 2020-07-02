@@ -3,7 +3,8 @@
 \docType{data}
 \name{ref_hema_microarray}
 \alias{ref_hema_microarray}
-\title{Matrix of average gene detection by microarray on sorted immune cell populations}
+\title{Matrix of average gene detection by microarray on sorted immune
+cell populations}
 \format{
 An object of class \code{function} of length 1.
 }

@@ -3,32 +3,41 @@ title: "clustifyrdatahub"
 author: Rui Fu
 date: "`r Sys.Date()`"
 output: 
-  BiocStyle::html_document:
-     toc_float: true
+    BiocStyle::html_document:
+        toc_float: true
 vignette: >
-  %\VignetteIndexEntry{clustifyrdatahub}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+    %\VignetteIndexEntry{clustifyrdatahub}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  message = FALSE,
-  warning = FALSE,
-  comment = "#>",
-  fig.path = "man/figures/",
-  out.width = "100%"
+    collapse = TRUE,
+    message = FALSE,
+    warning = FALSE,
+    comment = "#>",
+    fig.path = "man/figures/",
+    out.width = "100%"
 )
 ```
 
 # clustifyrdatahub
 
-clustifyrdatahub provides external reference data sets for cell-type assignment with [clustifyr](https://rnabioco.github.io/clustifyr).
+clustifyrdatahub provides external reference data 
+sets for cell-type assignment with 
+[clustifyr](https://rnabioco.github.io/clustifyr).
 
 ## Available references include
 ```{r}
-knitr::kable(read.csv(system.file("extdata", "metadata.csv", package = "clustifyrdatahub")))
+knitr::kable(
+    read.csv(
+        system.file(
+            "extdata", 
+            "metadata.csv", 
+            package = "clustifyrdatahub")
+        )
+    )
 ```
 
 ## To use `clustifyrdatahub`
@@ -46,14 +55,18 @@ ref_hema_microarray <- refs[["EH3450"]]  ## load by EH id
 
 ## or list and load
 refs <- listResources(eh, "clustifyrdatahub")
-ref_hema_microarray <- loadResources(eh, "clustifyrdatahub", "ref_hema_microarray")[[1]]
+ref_hema_microarray <- loadResources(
+    eh, 
+    "clustifyrdatahub",
+    "ref_hema_microarray"
+    )[[1]]
 
 ## use for classification of cell types
 res <- clustifyr::clustify(
-  input = clustifyr::pbmc_matrix_small,
-  metadata = clustifyr::pbmc_meta$classified,
-  ref_mat = ref_hema_microarray,
-  query_genes = clustifyr::pbmc_vargenes
+    input = clustifyr::pbmc_matrix_small,
+    metadata = clustifyr::pbmc_meta$classified,
+    ref_mat = ref_hema_microarray,
+    query_genes = clustifyr::pbmc_vargenes
 )
 ```
 
@@ -64,7 +77,10 @@ ref_hema_microarray()[1:5, 1:5]           ## data are loaded
 ref_hema_microarray(metadata = TRUE)      ## only metadata
 ```
 
-Alternatively, see the [reference page](https://rnabioco.github.io/clustifyrdata/reference) for available data sets, and [individual ref download page](https://rnabioco.github.io/clustifyrdata/articles/download_refs.html).
+Alternatively, see the 
+[reference page](https://rnabioco.github.io/clustifyrdata/reference) 
+for available data sets, and individual ref download 
+[page](https://rnabioco.github.io/clustifyrdata/articles/download_refs.html).
 
 Data sets have uniform suffixes:
 - `ref_*` : the prebuilt reference expression matrix.

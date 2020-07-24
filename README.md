@@ -6,24 +6,33 @@
 clustifyrdatahub provides external reference data sets for cell-type
 assignment with [clustifyr](https://rnabioco.github.io/clustifyr).
 
+## Installation
+
+``` r
+# install.packages("remotes")
+remotes::install_github("rnabioco/clustifyrdatahub")
+```
+
 ## Available references include
 
 ``` r
-knitr::kable(read.csv(system.file("extdata", "metadata.csv", package = "clustifyrdatahub")))
+knitr::kable(dplyr::select(
+  read.csv(system.file("extdata", "metadata.csv", package = "clustifyrdatahub")),
+  c(1, 9, 2:7)))
 ```
 
-| Title                    | Description                                      | RDataPath                                     | BiocVersion | Genome | SourceType | SourceUrl                                                                                        | SourceVersion    | Species      | TaxonomyId | Coordinate\_1\_based | DataProvider   | Maintainer                     | RDataClass | DispatchClass |
-| :----------------------- | :----------------------------------------------- | :-------------------------------------------- | ----------: | :----- | :--------- | :----------------------------------------------------------------------------------------------- | :--------------- | :----------- | ---------: | :------------------- | :------------- | :----------------------------- | :--------- | :------------ |
-| ref\_MCA                 | Mouse Cell Atlas                                 | clustifyrdatahub/ref\_MCA.rda                 |        3.12 | mm10   | Zip        | <https://ndownloader.figshare.com/files/10756795>                                                | 7                | Mus musculus |      10090 | NA                   | figshare       | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_tabula\_muris\_drop | Tabula Muris (10X)                               | clustifyrdatahub/ref\_tabula\_muris\_drop.rda |        3.12 | mm10   | Zip        | <https://ndownloader.figshare.com/articles/5821263>                                              | 3                | Mus musculus |      10090 | NA                   | figshare       | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_tabula\_muris\_facs | Tabula Muris (SmartSeq2)                         | clustifyrdatahub/ref\_tabula\_muris\_facs.rda |        3.12 | mm10   | Zip        | <https://ndownloader.figshare.com/articles/5821263>                                              | 3                | Mus musculus |      10090 | NA                   | figshare       | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_mouse.rnaseq        | Mouse RNA-seq from 28 cell types                 | clustifyrdatahub/ref\_mouse.rnaseq.rda        |        3.12 | mm10   | RDA        | <https://github.com/dviraran/SingleR/tree/master/data>                                           | mouse.rnaseq.rda | Mus musculus |      10090 | NA                   | GitHub         | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_moca\_main          | Mouse Organogenesis Cell Atlas (main cell types) | clustifyrdatahub/ref\_moca\_main.rda          |        3.12 | mm10   | RDA        | <https://oncoscape.v3.sttrcancer.org/atlas.gs.washington.edu.mouse.rna/downloads>                | 1                | Mus musculus |      10090 | NA                   | washington.edu | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_immgen              | Mouse sorted immune cells                        | clustifyrdatahub/ref\_immgen.rda              |        3.12 | mm10   | RDA        | <https://github.com/dviraran/SingleR/tree/master/data>                                           | immgen.rda       | Mus musculus |      10090 | NA                   | GitHub         | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_hema\_microarray    | Human hematopoietic cell microarray              | clustifyrdatahub/ref\_hema\_microarray.rda    |        3.12 | hg38   | TXT        | <https://ftp.ncbi.nlm.nih.gov/geo/series/GSE24nnn/GSE24759/matrix/GSE24759_series_matrix.txt.gz> | 1                | Homo sapiens |       9606 | NA                   | GEO            | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_cortex\_dev         | Human cortex development scRNA-seq               | clustifyrdatahub/ref\_cortex\_dev.rda         |        3.12 | hg38   | TSV        | <https://cells.ucsc.edu/cortex-dev/exprMatrix.tsv.gz>                                            | 1                | Homo sapiens |       9606 | NA                   | UCSC           | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_pan\_indrop         | Human pancreatic cell scRNA-seq (inDrop)         | clustifyrdatahub/ref\_pan\_indrop.rda         |        3.12 | hg38   | RDA        | <https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/baron-human.Rda>               | 1                | Homo sapiens |       9606 | NA                   | S3             | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
-| ref\_pan\_smartseq2      | Human pancreatic cell scRNA-seq (SmartSeq2)      | clustifyrdatahub/ref\_pan\_smartseq2.rda      |        3.12 | hg38   | RDA        | <https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/segerstolpe.Rda>               | 1                | Homo sapiens |       9606 | NA                   | S3             | Rui Fu <raysinensis@gmail.com> | data.frame | Rda           |
+| Title                    | Species      | Description                                      | RDataPath                                     | BiocVersion | Genome | SourceType | SourceUrl                                                                                        |
+| :----------------------- | :----------- | :----------------------------------------------- | :-------------------------------------------- | ----------: | :----- | :--------- | :----------------------------------------------------------------------------------------------- |
+| ref\_MCA                 | Mus musculus | Mouse Cell Atlas                                 | clustifyrdatahub/ref\_MCA.rda                 |        3.12 | mm10   | Zip        | <https://ndownloader.figshare.com/files/10756795>                                                |
+| ref\_tabula\_muris\_drop | Mus musculus | Tabula Muris (10X)                               | clustifyrdatahub/ref\_tabula\_muris\_drop.rda |        3.12 | mm10   | Zip        | <https://ndownloader.figshare.com/articles/5821263>                                              |
+| ref\_tabula\_muris\_facs | Mus musculus | Tabula Muris (SmartSeq2)                         | clustifyrdatahub/ref\_tabula\_muris\_facs.rda |        3.12 | mm10   | Zip        | <https://ndownloader.figshare.com/articles/5821263>                                              |
+| ref\_mouse.rnaseq        | Mus musculus | Mouse RNA-seq from 28 cell types                 | clustifyrdatahub/ref\_mouse.rnaseq.rda        |        3.12 | mm10   | RDA        | <https://github.com/dviraran/SingleR/tree/master/data>                                           |
+| ref\_moca\_main          | Mus musculus | Mouse Organogenesis Cell Atlas (main cell types) | clustifyrdatahub/ref\_moca\_main.rda          |        3.12 | mm10   | RDA        | <https://oncoscape.v3.sttrcancer.org/atlas.gs.washington.edu.mouse.rna/downloads>                |
+| ref\_immgen              | Mus musculus | Mouse sorted immune cells                        | clustifyrdatahub/ref\_immgen.rda              |        3.12 | mm10   | RDA        | <https://github.com/dviraran/SingleR/tree/master/data>                                           |
+| ref\_hema\_microarray    | Homo sapiens | Human hematopoietic cell microarray              | clustifyrdatahub/ref\_hema\_microarray.rda    |        3.12 | hg38   | TXT        | <https://ftp.ncbi.nlm.nih.gov/geo/series/GSE24nnn/GSE24759/matrix/GSE24759_series_matrix.txt.gz> |
+| ref\_cortex\_dev         | Homo sapiens | Human cortex development scRNA-seq               | clustifyrdatahub/ref\_cortex\_dev.rda         |        3.12 | hg38   | TSV        | <https://cells.ucsc.edu/cortex-dev/exprMatrix.tsv.gz>                                            |
+| ref\_pan\_indrop         | Homo sapiens | Human pancreatic cell scRNA-seq (inDrop)         | clustifyrdatahub/ref\_pan\_indrop.rda         |        3.12 | hg38   | RDA        | <https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/baron-human.Rda>               |
+| ref\_pan\_smartseq2      | Homo sapiens | Human pancreatic cell scRNA-seq (SmartSeq2)      | clustifyrdatahub/ref\_pan\_smartseq2.rda      |        3.12 | hg38   | RDA        | <https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/segerstolpe.Rda>               |
 
 ## To use `clustifyrdatahub`
 
@@ -35,7 +44,7 @@ eh <- ExperimentHub()
 refs <- query(eh, "clustifyrdatahub")
 refs
 #> ExperimentHub with 10 records
-#> # snapshotDate(): 2020-06-26
+#> # snapshotDate(): 2020-07-10
 #> # $dataprovider: figshare, S3, GitHub, washington.edu, UCSC, GEO
 #> # $species: Mus musculus, Homo sapiens
 #> # $rdataclass: data.frame
@@ -75,7 +84,7 @@ res <- clustifyr::clustify(
 ``` r
 ## or load refs by function name (after loading hub library)
 library(clustifyrdatahub)
-ref_hema_microarray()[1:5， 1:5]           ## data are loaded
+ref_hema_microarray()[1:5, 1:5]           ## data are loaded
 #>        Basophils CD4+ Central Memory CD4+ Effector Memory CD8+ Central Memory
 #> DDR1    6.084244            5.967502             5.933039            6.005278
 #> RFC2    6.280044            6.028615             6.047005            5.992979
@@ -90,7 +99,7 @@ ref_hema_microarray()[1:5， 1:5]           ## data are loaded
 #> GUCA1A             5.090882
 ref_hema_microarray(metadata = TRUE)       ## only metadata
 #> ExperimentHub with 1 record
-#> # snapshotDate(): 2020-06-26
+#> # snapshotDate(): 2020-07-10
 #> # names(): EH3450
 #> # package(): clustifyrdatahub
 #> # $dataprovider: GEO
@@ -109,17 +118,5 @@ ref_hema_microarray(metadata = TRUE)       ## only metadata
 #> # retrieve record with 'object[["EH3450"]]'
 ```
 
-Alternatively, see the [reference
-page](https://rnabioco.github.io/clustifyrdata/reference) for available
-data sets, and [individual ref download
-page](https://rnabioco.github.io/clustifyrdata/articles/download_refs.html).
-
 Data sets have uniform suffixes: - `ref_*` : the prebuilt reference
 expression matrix.
-
-## Installation
-
-``` r
-# install.packages("remotes")
-remotes::install_github("rnabioco/clustifyrdatahub")
-```

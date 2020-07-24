@@ -28,16 +28,18 @@ clustifyrdatahub provides external reference data
 sets for cell-type assignment with 
 [clustifyr](https://rnabioco.github.io/clustifyr).
 
+## Installation
+
+```{r, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("rnabioco/clustifyrdatahub")
+```
+
 ## Available references include
 ```{r}
-knitr::kable(
-    read.csv(
-        system.file(
-            "extdata", 
-            "metadata.csv", 
-            package = "clustifyrdatahub")
-        )
-    )
+knitr::kable(dplyr::select(
+  read.csv(system.file("extdata", "metadata.csv", package = "clustifyrdatahub")),
+  c(1, 9, 2:7)))
 ```
 
 ## To use `clustifyrdatahub`
@@ -75,21 +77,6 @@ res <- clustifyr::clustify(
 library(clustifyrdatahub)
 ref_hema_microarray()[1:5, 1:5]           ## data are loaded
 ref_hema_microarray(metadata = TRUE)      ## only metadata
-```
-
-Alternatively, see the 
-[reference page](https://rnabioco.github.io/clustifyrdata/reference) 
-for available data sets, and individual ref download 
-[page](https://rnabioco.github.io/clustifyrdata/articles/download_refs.html).
-
-Data sets have uniform suffixes:
-- `ref_*` : the prebuilt reference expression matrix.
-
-## Installation
-
-```{r, eval = F}
-# install.packages("remotes")
-remotes::install_github("rnabioco/clustifyrdatahub")
 ```
 
 # session info

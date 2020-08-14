@@ -31,8 +31,10 @@ sets for cell-type assignment with
 ## Installation
 
 ```{r, eval = FALSE}
-# install.packages("remotes")
-remotes::install_github("rnabioco/clustifyrdatahub")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("clustifyrdatahub")
 ```
 
 ## Available references include

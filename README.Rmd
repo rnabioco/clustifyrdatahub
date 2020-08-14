@@ -22,8 +22,10 @@ clustifyrdatahub provides external reference data sets for cell-type assignment 
 ## Installation
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("rnabioco/clustifyrdatahub")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("clustifyrdatahub")
 ```
 
 ## Available references include

@@ -94,3 +94,12 @@
 #' @family ref
 #' @examples ref_MCA(metadata = TRUE)
 "ref_MCA"
+
+#' Atlas matrix of average gene expression aggregated from scRNA-seq data of mouse organisms
+#' 
+#' Data aggregated from NCBI Gene Expression Omnibus
+#' 
+#' @source <https://github.com/rnabioco/scRNA-seq-Cell-Ref-Matrix/blob/master/atlas/musMusculus/MouseAtlas.rds>
+#' @family ref
+#' @examples ref_MouseAtlas(metadata = True) 
+"ref_MouseAtlas"  

@@ -23,7 +23,7 @@ main.data <- data.frame(
     "Human cortex development scRNA-seq",
     "Human pancreatic cell scRNA-seq (inDrop)",
     "Human pancreatic cell scRNA-seq (SmartSeq2)",
-    "Mouse RNA-seq from 321 cell types"
+    "Mouse Atlas scRNA-seq from 321 cell types"
   ),
   RDataPath = file.path("clustifyrdatahub",
                         c("ref_MCA.rda",

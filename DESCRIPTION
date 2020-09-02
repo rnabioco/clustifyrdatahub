@@ -1,6 +1,6 @@
 Package: clustifyrdatahub
 Title: External data sets for clustifyr in ExperimentHub
-Version: 0.99.3
+Version: 0.99.4
 Description: References made from external single-cell mRNA sequencing data sets, stored as average gene expression matrices. For use with clustifyr <https://bioconductor.org/packages/clustifyr> to assign cell type identities.
 Authors@R: 
     c(person(given = "Rui",

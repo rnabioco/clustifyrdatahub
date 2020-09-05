@@ -23,7 +23,12 @@ Authors@R:
              family = "Hesselberth",
              role = "ctb",
              comment = c(ORCID = "0000-0002-6299-179X"),
-             email = "jay.hesselberth@gmail.com"))
+             email = "jay.hesselberth@gmail.com"),
+      person(given = "Sidhant",
+             family = "Puntambekar",
+             role = "ctb",
+             email = "sidhantnp@yahoo.com",
+      ))
 License: MIT + file LICENSE
 URL: https://rnabioco.github.io/clustifyrdatahub
 Depends:

@@ -75,7 +75,7 @@ main.data <- data.frame(
     "https://cells.ucsc.edu/cortex-dev/exprMatrix.tsv.gz",
     "https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/baron-human.rds",
     "https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/segerstolpe.rds",
-    "https://github.com/rnabioco/scRNA-seq-Cell-Ref-Matrix/blob/master/atlas/musMusculus/MouseAtlas.rds"
+    "https://github.com/rnabioco/scRNA-seq-Cell-Ref-Matrix/blob/master/atlas/musMusculus/MouseAtlas.rda"
   ),
   SourceVersion=c(
     "7",

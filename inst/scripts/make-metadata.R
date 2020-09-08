@@ -49,7 +49,8 @@ main.data <- data.frame(
     "hg38",
     "hg38",
     "hg38",
-    "hg38"
+    "hg38",
+    "mm10"
   ),
   SourceType=c(
     "Zip",
@@ -87,6 +88,7 @@ main.data <- data.frame(
     "1",
     "1",
     "1",
+    "1",
     "1"
   ),
   Species=c(
@@ -112,7 +114,8 @@ main.data <- data.frame(
     "9606",
     "9606",
     "9606",
-    "9606"
+    "9606",
+    "10090"
   ),
   Coordinate_1_based=NA,
   DataProvider=c(

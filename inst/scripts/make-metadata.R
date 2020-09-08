@@ -9,7 +9,8 @@ main.data <- data.frame(
     "ref_hema_microarray",    
     "ref_cortex_dev",              
     "ref_pan_indrop",              
-    "ref_pan_smartseq2"    
+    "ref_pan_smartseq2",
+    "ref_mouse_atlas"
   ),
   Description = c(
     "Mouse Cell Atlas",
@@ -21,7 +22,8 @@ main.data <- data.frame(
     "Human hematopoietic cell microarray",
     "Human cortex development scRNA-seq",
     "Human pancreatic cell scRNA-seq (inDrop)",
-    "Human pancreatic cell scRNA-seq (SmartSeq2)"
+    "Human pancreatic cell scRNA-seq (SmartSeq2)",
+    "Mouse Atlas scRNA-seq from 321 cell types"
   ),
   RDataPath = file.path("clustifyrdatahub",
                         c("ref_MCA.rda",
@@ -33,7 +35,8 @@ main.data <- data.frame(
                           "ref_hema_microarray.rda",
                           "ref_cortex_dev.rda",
                           "ref_pan_indrop.rda",
-                          "ref_pan_smartseq2.rda"
+                          "ref_pan_smartseq2.rda",
+                          "ref_mouse_atlas.rda"
                           )),
   BiocVersion="3.12",
   Genome=c(
@@ -58,6 +61,7 @@ main.data <- data.frame(
     "TXT",
     "TSV",
     "RDA",
+    "RDA",
     "RDA"
   ),
   SourceUrl=c(
@@ -70,7 +74,8 @@ main.data <- data.frame(
     "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE24nnn/GSE24759/matrix/GSE24759_series_matrix.txt.gz",
     "https://cells.ucsc.edu/cortex-dev/exprMatrix.tsv.gz",
     "https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/baron-human.rds",
-    "https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/segerstolpe.rds"
+    "https://scrnaseq-public-datasets.s3.amazonaws.com/scater-objects/segerstolpe.rds",
+    "https://github.com/rnabioco/scRNA-seq-Cell-Ref-Matrix/blob/master/atlas/musMusculus/MouseAtlas.rda"
   ),
   SourceVersion=c(
     "7",
@@ -94,7 +99,8 @@ main.data <- data.frame(
     "Homo sapiens",
     "Homo sapiens",
     "Homo sapiens",
-    "Homo sapiens"
+    "Homo sapiens",
+    "Mus musculus"
   ),
   TaxonomyId=c(
     "10090",
@@ -119,7 +125,8 @@ main.data <- data.frame(
     "GEO",
     "UCSC",
     "S3",
-    "S3"
+    "S3",
+    "GEO"
   ),
   Maintainer="Rui Fu <raysinensis@gmail.com>",
   RDataClass="data.frame",

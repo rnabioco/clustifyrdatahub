@@ -1,6 +1,6 @@
 Package: clustifyrdatahub
 Title: External data sets for clustifyr in ExperimentHub
-Version: 0.99.3
+Version: 0.99.4
 Description: References made from external single-cell mRNA sequencing data sets, stored as average gene expression matrices. For use with clustifyr <https://bioconductor.org/packages/clustifyr> to assign cell type identities.
 Authors@R: 
     c(person(given = "Rui",
@@ -23,7 +23,12 @@ Authors@R:
              family = "Hesselberth",
              role = "ctb",
              comment = c(ORCID = "0000-0002-6299-179X"),
-             email = "jay.hesselberth@gmail.com"))
+             email = "jay.hesselberth@gmail.com"),
+      person(given = "Sidhant",
+             family = "Puntambekar",
+             role = "ctb",
+             email = "sidhantnp@yahoo.com",
+      ))
 License: MIT + file LICENSE
 URL: https://rnabioco.github.io/clustifyrdatahub
 Depends:
@@ -43,6 +48,6 @@ VignetteBuilder:
     knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 biocViews: SingleCellData, SequencingData, MicroarrayData, ExperimentHub, RNASeqData, PackageTypeData, ExpressionData
 BugReports: https://github.com/rnabioco/clustifyrdatahub/issues

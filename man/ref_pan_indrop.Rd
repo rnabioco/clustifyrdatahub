@@ -28,6 +28,7 @@ Other ref:
 \code{\link{ref_immgen}()},
 \code{\link{ref_moca_main}()},
 \code{\link{ref_mouse.rnaseq}()},
+\code{\link{ref_mouse_atlas}()},
 \code{\link{ref_pan_smartseq2}()},
 \code{\link{ref_tabula_muris_drop}()},
 \code{\link{ref_tabula_muris_facs}()}

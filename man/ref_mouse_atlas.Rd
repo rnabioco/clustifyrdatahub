@@ -17,7 +17,7 @@ ref_mouse_atlas
 Data aggregated from NCBI Gene Expression Omnibus
 }
 \examples{
-ref_mouse_atlas(metadata = True) 
+ref_mouse_atlas(metadata = TRUE) 
 }
 \seealso{
 Other ref: 

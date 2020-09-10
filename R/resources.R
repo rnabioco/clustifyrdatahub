@@ -101,5 +101,5 @@
 #' 
 #' @source <https://github.com/rnabioco/scRNA-seq-Cell-Ref-Matrix/blob/master/atlas/musMusculus/MouseAtlas.rds>
 #' @family ref
-#' @examples ref_mouse_atlas(metadata = True) 
+#' @examples ref_mouse_atlas(metadata = TRUE) 
 "ref_mouse_atlas"  

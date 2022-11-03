@@ -34,3 +34,4 @@ Available datasets:
 + Human pancreatic cell scRNA-seq (SmartSeq2)
 - [ref_pan_smartseq2()]
 }
+\keyword{internal}

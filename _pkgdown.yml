@@ -1,0 +1,18 @@
+url: https://rnabioco.github.io/clustifyrdatahub
+
+development:
+  mode: auto
+  
+template:
+  package: rbitemplate
+  bootstrap: 5
+
+home:
+  links:
+  - text: clustifyr
+    href: http://rnabioco.github.io/clustifyr
+
+reference:
+- title: pre-built references
+- contents:
+  - has_concept("ref")

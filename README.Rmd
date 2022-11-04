@@ -29,7 +29,7 @@ BiocManager::install("clustifyrdatahub")
 ```
 
 ## Available references include
-```{r}
+```{r, echo=FALSE}
 knitr::kable(dplyr::select(
   read.csv(system.file("extdata", "metadata.csv", package = "clustifyrdatahub")),
   c(1, 9, 2:7)))

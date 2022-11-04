@@ -51,3 +51,7 @@ LazyData: true
 RoxygenNote: 7.2.1
 biocViews: SingleCellData, SequencingData, MicroarrayData, ExperimentHub, RNASeqData, PackageTypeData, ExpressionData
 BugReports: https://github.com/rnabioco/clustifyrdatahub/issues
+Config/Needs/website:
+    pkgdown,
+    rnabioco/rbitemplate
+

@@ -1,0 +1,10 @@
+pandoc: 2.19.2
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles:
+  clustifyrdatahub: clustifyrdatahub.html
+last_built: 2022-11-04T00:49Z
+urls:
+  reference: https://rnabioco.github.io/clustifyrdatahub/reference
+  article: https://rnabioco.github.io/clustifyrdatahub/articles
+

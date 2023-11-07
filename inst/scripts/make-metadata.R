@@ -63,7 +63,7 @@ main.data <- data.frame(
     "TSV",
     "RDA",
     "RDA",
-    "RDA"
+    "RDS"
   ),
   SourceUrl=c(
     "https://ndownloader.figshare.com/files/10756795",
